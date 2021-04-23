@@ -1,0 +1,214 @@
+ * {
+     overflow-x: hidden;
+ }
+ 
+ body {
+    margin: 0;
+    padding: 0;
+    background: #ffffcc;
+    font-family: 'antonio', sans-serif;
+}
+
+header {
+    background: #ffffcc;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+}
+
+#navbar h1 {
+    margin-right: auto;
+    padding: 0 30px;
+    font-size: 3em;
+}
+
+#navbar ul {
+    padding: 0;
+    display: flex;
+}
+
+#navbar li {
+    margin: 0px;
+    list-style: none;
+}
+
+#navbar a {
+    text-decoration: none;
+    text-transform: none;
+    color: black;
+    padding: 0 5px;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+
+#banner {
+    background: rgb(104, 20, 55);
+    display: flex;
+    color: white;
+}
+
+#banner-text {
+    margin: 5vh auto 0 auto;
+    position: relative;
+    animation-name: bannerSlide;
+    animation-duration: 1s;
+}
+
+#banner-text input {
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    height: 2.5vw;
+    width: 13vw;
+    border: 3px white solid;
+    margin-top: 3vh;
+    font-size: 1.4em;
+    cursor: pointer;
+    text-align: center;
+}
+
+#banner-text input:hover {
+    color: rgb(104, 20, 55);
+    background: white;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+#banner h1 {
+    color: white;
+    font-size: 4em;
+    width: 18ch;
+    margin-bottom: 1.5vh;
+}
+
+#banner span {
+    color: #ffc;
+    width: 60ch;
+    font-size: 1.6em;
+    display: block;
+}
+
+img {
+    height: 40vh;
+    margin: 10vh;
+}
+
+#nav-below {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    margin-bottom: 9vh;
+}
+
+.link-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-block a:first-child {
+    height: 24vw;
+    width: 17vw;
+    margin: 1vw;
+    display: inline;
+    text-align: center;
+    line-height: 15vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.link-block a:first-child:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+.link-block a:first-child:hover:after {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#menu-card {
+    background-image: url("https://wallpaperaccess.com/full/424729.jpg");
+    background-size: cover;
+    color: white;
+    font-size: 4em;
+}
+
+#location-card {
+    background-image: url("https://assets.rbl.ms/21664246/origin.jpg");
+    background-size: cover;
+    color: white;
+    font-size: 4em;
+}
+
+#story-card {
+    background-image: url("https://cdn.hipwallpaper.com/i/16/57/RCw47l.jpg");
+    background-size: cover;
+    color: white;
+    font-size: 4em;
+}
+
+.link-block a:last-child {
+    height: 3vw;
+    width: 17vw;
+    margin: 1vw;
+    background-color:rgba(255, 255, 255, 0);
+    border: 3px solid black;
+    font-size: 1.4em;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2.6vw;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+footer {
+    color: black;
+    height: 15vh;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+}
+
+footer h1 {
+    margin-right: auto;
+}
+
+footer div:first-child {
+    margin-left: auto;
+}
+
+@keyframes bannerSlide {
+    0% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
