@@ -25,10 +25,15 @@ header {
     margin: auto 0;
 }
 
-#navbar h1 {
+#navbar img {
     margin-right: auto;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
     padding: 0 30px;
     font-size: 3em;
+    height: 13vh;
+    width: auto;
+    
 }
 
 #navbar ul {
@@ -48,7 +53,7 @@ header {
     padding: 0 5px;
     margin: 0 25px;
     font-weight: 600;
-    font-size: 1.8em;
+    font-size: 2.2em;
 }
 
 #navbar a:hover {
@@ -57,7 +62,7 @@ header {
 
 
 #banner {
-    background: rgb(104, 20, 55);
+    background: #681437;
     display: flex;
     color: white;
 }
@@ -184,17 +189,33 @@ img {
 
 footer {
     color: black;
-    height: 15vh;
+    height: 30vh;
     background: rgba(0,0,0,0.1);
     display: flex;
 }
 
-footer h1 {
+footer img {
+    height: 15vh;
+    margin: 3vh 15vh 1vh auto;
+}
+
+footer div:last-child {
     margin-right: auto;
 }
 
-footer div:first-child {
-    margin-left: auto;
+.footer-text {
+    margin-right: 15vh;
+}
+
+.footer-text h1 {
+    color: #681437;
+    font-size: 2.2em;
+}
+
+.footer-text div {
+    line-height: 34px;
+    height: 15vh;
+    font-size: 1.2em;
 }
 
 @keyframes bannerSlide {
