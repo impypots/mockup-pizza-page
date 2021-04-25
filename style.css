@@ -5,7 +5,7 @@
  body {
     margin: 0;
     padding: 0;
-    background: #ffffcc;
+    background: rgb(255, 255, 204);
     font-family: 'antonio', sans-serif;
 }
 
@@ -39,6 +39,10 @@ header {
 #navbar ul {
     padding: 0;
     display: flex;
+}
+
+#burger {
+    display: none;
 }
 
 #navbar li {
@@ -106,7 +110,7 @@ header {
     display: block;
 }
 
-img {
+#banner img {
     height: 40vh;
     margin: 10vh;
 }
@@ -116,11 +120,15 @@ img {
     justify-content: center;
     margin-top: 3vh;
     margin-bottom: 9vh;
+    background: rgba(0,0,0,0);
+    z-index: 1;
 }
 
 .link-block {
     display: flex;
     flex-direction: column;
+    background: rgba(0,0,0,0);
+    z-index: 1;
 }
 
 .link-block a:first-child {
@@ -150,6 +158,7 @@ img {
 .link-block a:first-child:hover:after {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
 
 #menu-card {
     background-image: url("https://wallpaperaccess.com/full/424729.jpg");
@@ -185,6 +194,34 @@ img {
     text-decoration: none;
     color: black;
     box-sizing: border-box;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.link-block a:last-child:hover {
+    color: white;
+    border-color: #681437;
+    transition: border-color 0.3s ease 0.3s;
+}
+
+.link-block a:last-child::before {
+    transition: 0.3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color:#681437;
+}
+
+.link-block a:last-child:hover::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
 }
 
 footer {
@@ -218,6 +255,15 @@ footer div:last-child {
     font-size: 1.2em;
 }
 
+.footer-text a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    color: #681437;
+}
+
 @keyframes bannerSlide {
     0% {
         left: 100%;
@@ -231,5 +277,137 @@ footer div:last-child {
     100% {
         left: 0%;
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #navbar img {
+        margin: 1vh auto 1vh 0;
+        padding: 0 30px;
+        font-size: 3em;
+        height: 15vw;
+        width: auto;
+
+    }
+
+    #navbar {
+        justify-content: center;
+    }
+
+    #navbar ul {
+        position: fixed;
+        flex-direction: column;
+        background-color: #681437;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 0%;
+        margin: auto 0;
+        z-index: 20;
+        transition: width 0.3s ease-in;
+    }
+
+
+    #navbar ul li {
+        margin: auto;
+        color: white;
+    }
+
+    #navbar a {
+        color: white;
+    }
+
+    #burger {
+        display: block;
+        margin-left: auto;
+        margin-right: 2vh;
+        cursor: pointer;
+        width: 5vw;
+    }
+
+    #burger div {
+        height: 0.75vw;
+        width: 4.7vw;
+        background: black;
+        margin: 0.3vw .15vw;
+    }
+
+    #burger div:first-child {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        width: 4vw;
+        margin: 0.3vh 0.5vw;
+    }
+
+    #burger div:last-child {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        width: 4vw;
+        margin: 0.3vh 0.5vw;
+    }
+
+    #nav-below {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-block a:first-child {
+        height: 50vw;
+        width: 70vw;
+        line-height: 40vw;
+    }
+
+    .link-block a:last-child {
+        height: 7vw;
+        width: 70vw;
+        line-height: 5.2vw;
+    }
+
+    #banner img {
+        display: none;
+    }
+
+    #banner-text {
+        margin: 0 5vh 5vh 5vh;
+        position: relative;
+    }
+
+    #banner-text h1 {
+        margin-top: 2.5vh;
+    }
+
+    #banner-text input {
+        display: none;
+    }
+
+    #banner span {
+        width: 100%;
+        font-size: 1.6em;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .footer-text {
+        margin: 0;
+        text-align: center;
+    }
+
+    footer div:last-child {
+        margin: 0;
+    }
+
+    footer div:last-child div {
+        height: auto;
+        margin-bottom: 2.5vh;
+    }
+
+    footer img {
+        height: auto;
+        width: 35vw;
+        margin: 2vh;
     }
 }
