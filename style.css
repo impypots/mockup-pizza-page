@@ -264,6 +264,66 @@ footer div:last-child {
     color: #681437;
 }
 
+
+
+
+/* ============ ABOUT PAGE STYLES ============ */
+
+#about-banner {
+    background:rgb(104, 20, 55);
+    color: white;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+}
+
+#about-banner h1 {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 2vh;
+}
+
+#about-body {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10vh;
+}
+
+#about-body div {
+    margin: 0 0;
+}
+
+#about-body h1 {
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 0.75vw;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+}
+
+#about-body span {
+    width: 15vw;
+    margin-top: 2vh;
+    padding: 1vh;
+    line-height: 1.6em;
+    display: block;
+} 
+
+#facebook-feed {
+    background: gray;
+    width: 13.5vw;
+    height: 20vw;
+    padding: 0.75vw;
+    margin: 0.75vw;
+}
+
+
+/* ============ KEYFRAMES ============ */
+
 @keyframes bannerSlide {
     0% {
         left: 100%;
@@ -279,6 +339,8 @@ footer div:last-child {
         opacity: 1;
     }
 }
+
+/* ============ MOBILE RESPONSIVE STYLES ============ */
 
 @media only screen and (max-width: 800px) {
     #navbar img {
