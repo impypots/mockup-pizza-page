@@ -9,6 +9,10 @@
     font-family: 'antonio', sans-serif;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 header {
     background: #ffffcc;
     height: 10vh;
@@ -264,9 +268,7 @@ footer div:last-child {
     color: #681437;
 }
 
-.underline {
-    text-decoration: underline;
-}
+
 
 
 
@@ -314,14 +316,6 @@ footer div:last-child {
     padding: 1vh;
     line-height: 1.6em;
     display: block;
-} 
-
-#facebook-feed {
-    background: gray;
-    width: 13.5vw;
-    height: 20vw;
-    padding: 0.75vw;
-    margin: 0.75vw;
 }
 
 
