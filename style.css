@@ -40,6 +40,10 @@ header {
     
 }
 
+#navbar > a {
+    margin-right: auto;
+}
+
 #navbar ul {
     padding: 0;
     display: flex;
@@ -54,7 +58,7 @@ header {
     list-style: none;
 }
 
-#navbar a {
+#navbar li > a {
     text-decoration: none;
     text-transform: none;
     color: black;
@@ -63,6 +67,8 @@ header {
     font-weight: 600;
     font-size: 2.2em;
 }
+
+
 
 #navbar a:hover {
     text-decoration: underline;
@@ -237,6 +243,9 @@ footer {
 
 footer img {
     height: 15vh;
+}
+
+footer a {
     margin: 3vh 15vh 1vh auto;
 }
 
@@ -271,6 +280,69 @@ footer div:last-child {
 
 
 
+/* ============ CONTACT PAGE STYLES ============ */
+
+#contact-banner {
+    background:rgb(104, 20, 55);
+    color: white;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+}
+
+#contact-body {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-node {
+    margin: 0 5%;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-node:first-child {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+
+.contact-node span {
+    text-align: center;
+    line-height: 1.4em;
+}
+.contact-node h1 {
+    border-bottom: 3px solid black;
+    margin-top: 20%;
+    padding: 1% 5%;
+}
+
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:160%;
+    position:relative;
+    height:100%;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+
+
 
 /* ============ ABOUT PAGE STYLES ============ */
 
@@ -292,12 +364,13 @@ footer div:last-child {
 
 #about-body {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 #about-body div {
-    margin: 0 0;
+    margin: 0 5%;
 }
 
 #about-body h1 {
@@ -311,10 +384,10 @@ footer div:last-child {
 }
 
 #about-body span {
-    width: 15vw;
+    width: 60ch;
     margin-top: 2vh;
     padding: 1vh;
-    line-height: 1.6em;
+    line-height: 3em;
     display: block;
 }
 
@@ -455,18 +528,64 @@ footer div:last-child {
         text-align: center;
     }
 
-    footer div:last-child {
+    footer > div:last-child {
         margin: 0;
+       text-align: center;
     }
 
     footer div:last-child div {
         height: auto;
         margin-bottom: 2.5vh;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    footer div:last-child div a {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     footer img {
         height: auto;
         width: 35vw;
-        margin: 2vh;
+        margin: 2vh 4.5vh 2vh 2vh;
     }
+
+    #about-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-body span {
+        width: 100%;
+    }
+
+    #about-body h1 {
+      width: 100%;
+    }
+
+    #about-body iframe {
+        width: 86vw;
+        margin-left: 30vw;
+    }
+
+    #contact-body {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5vh;
+    }
+
+
+    #contact-node {
+        margin-top: 5vh;
+    }
+
+    .contact-node:last-child h1 {
+        line-height: auto;
+        height: 16.5vh;
+        width: auto;
+        overflow-y: hidden;
+    }
+
+
 }
