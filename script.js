@@ -10,3 +10,7 @@ function toggleList() {
         navList.style.width = '33%';
     }
 }
+
+document.addEventListener("fullscreenchange", function() {
+    navList.style.width = '33%';
+})

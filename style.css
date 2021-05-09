@@ -392,6 +392,70 @@ footer div:last-child {
 }
 
 
+
+
+
+/* ============ MENU PAGE STYLES ============ */
+
+#menu-text {
+    margin-bottom: 15vh;
+    margin-top: 10vh;
+}
+
+.submenu h1 {
+    color: white;
+    text-align: center;
+    height: 10vh;
+    width: 45vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 10vh;
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.submenu h1:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(0,0,0,0.3);
+    z-index: -1;
+    left: 0;
+}
+
+#menu-text .submenu:first-child h1  {
+    background-image: url("https://antoniospizza.net/images/coupons/antoniostrio.jpg");
+}
+
+#menu-text .submenu:nth-child(2) h1 {
+    background-image: url("http://gourmetwithblakely.com/wp-content/uploads/2018/02/spicy-baked-chicken-wings-1024x512.jpeg");
+}
+
+#menu-text .submenu:last-child h1 {
+    background-image: url("https://www.thespruceeats.com/thmb/r83ZPDHz-iy2VjRJMAf6ya3S-7A=/2500x1406/smart/filters:no_upscale()/perfectgreensalad2500-5993ab28c412440011db26df.jpg");
+}
+
+.submenu-text {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 45vw;
+    min-height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-sizing: border-box;
+}
+
+.submenu-text h3 {
+    color: rgb(104, 20, 55);
+}
+
+
+
 /* ============ KEYFRAMES ============ */
 
 @keyframes bannerSlide {
@@ -587,5 +651,13 @@ footer div:last-child {
         overflow-y: hidden;
     }
 
+    .submenu h1 {
+        width: 70vw;
+    }
+
+    .submenu-text {
+        width: 70vw;
+        padding-bottom: 5vw;
+    }
 
 }
