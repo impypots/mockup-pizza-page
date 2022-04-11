@@ -78,11 +78,15 @@ header {
 #banner {
     background: #681437;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: white;
+    padding: 50px 0;
 }
 
 #banner-text {
-    margin: 5vh auto 0 auto;
+    margin: 0;
+    padding: 0 20px;
     position: relative;
     animation-name: bannerSlide;
     animation-duration: 1s;
@@ -91,10 +95,10 @@ header {
 #banner-text input {
     background: rgba(255, 255, 255, 0);
     color: white;
-    height: 2.5vw;
-    width: 13vw;
+    min-width: 14ch;
     border: 3px white solid;
     margin-top: 3vh;
+    padding: 4px 16px;
     font-size: 1.4em;
     cursor: pointer;
     text-align: center;
@@ -111,6 +115,7 @@ header {
     font-size: 4em;
     width: 18ch;
     margin-bottom: 1.5vh;
+    margin-top: 0;
 }
 
 #banner span {
@@ -122,13 +127,12 @@ header {
 
 #banner img {
     height: 40vh;
-    margin: 10vh;
 }
 
 #nav-below {
     display: flex;
     justify-content: center;
-    margin-top: 3vh;
+    margin-top: 9vh;
     margin-bottom: 9vh;
     background: rgba(0,0,0,0);
     z-index: 1;
@@ -145,13 +149,15 @@ header {
     height: 24vw;
     width: 17vw;
     margin: 1vw;
+    padding: 0;
     display: inline;
     text-align: center;
-    line-height: 15vw;
+    padding-top: 4vw;
     cursor: pointer;
     position: relative;
     z-index: 1;
     text-decoration: none;
+    overflow-y: hidden;
 }
 
 .link-block a:first-child:after {
@@ -160,7 +166,8 @@ header {
     width: 100%;
     content: '';
     left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
     transition: background-color 0.3s ease;
 }
@@ -200,7 +207,6 @@ header {
     font-size: 1.4em;
     cursor: pointer;
     text-align: center;
-    line-height: 2.6vw;
     text-decoration: none;
     color: black;
     box-sizing: border-box;
@@ -224,6 +230,7 @@ header {
     opacity: 0;
     content: "";
     background-color:#681437;
+    pointer-events:none;
 }
 
 .link-block a:last-child:hover::before {
@@ -236,7 +243,8 @@ header {
 
 footer {
     color: black;
-    height: 30vh;
+    min-height: 30vh;
+    padding: 30px 0 120px 0;
     background: rgba(0,0,0,0.1);
     display: flex;
 }
@@ -264,7 +272,7 @@ footer div:last-child {
 
 .footer-text div {
     line-height: 34px;
-    height: 15vh;
+    min-height: 15vh;
     font-size: 1.2em;
 }
 
@@ -349,7 +357,7 @@ footer div:last-child {
 #about-banner {
     background:rgb(104, 20, 55);
     color: white;
-    height: 20vh;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -405,7 +413,7 @@ footer div:last-child {
 .submenu h1 {
     color: white;
     text-align: center;
-    height: 10vh;
+    min-height: 10vh;
     width: 45vw;
     background-repeat: no-repeat;
     background-size: cover;
@@ -413,6 +421,7 @@ footer div:last-child {
     font-size: 3em;
     margin-left: auto;
     margin-right: auto;
+    padding: 26px 0;
     position: relative;
     z-index: 1;
 }
@@ -425,10 +434,11 @@ footer div:last-child {
     background: rgba(0,0,0,0.3);
     z-index: -1;
     left: 0;
+    top: 0;
 }
 
 #menu-text .submenu:first-child h1  {
-    background-image: url("https://antoniospizza.net/images/coupons/antoniostrio.jpg");
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/698/474/361/dinner-food-pie-pizza-wallpaper-preview.jpg");
 }
 
 #menu-text .submenu:nth-child(2) h1 {
@@ -447,6 +457,8 @@ footer div:last-child {
     margin-right: auto;
     padding-left: 5vw;
     padding-right: 5vw;
+    padding-top: 10px;
+    padding-bottom: 40px;
     box-sizing: border-box;
 }
 
